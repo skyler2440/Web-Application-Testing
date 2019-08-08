@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Functions from './Functions'
 import Display from './Display'
 const Dashboard = () => {
    
@@ -6,7 +7,7 @@ const Dashboard = () => {
     const [ball, setBall] = useState(0);
     const [foul, setFoul] = useState(0);
     
-    function strikes() {
+   function strikes () {
         if (strike === 3){
             setStrike(0)
             setBall(0)
@@ -45,7 +46,7 @@ const Dashboard = () => {
         
         
         <Display strike={strike} ball={ball} foul={foul} />
-
+        {/* <Functions strike={strike} ball={ball} foul={foul} /> */}
         </>
     )
 }
