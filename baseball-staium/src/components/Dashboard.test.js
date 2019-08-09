@@ -4,10 +4,16 @@ import Dashboard, {setStrike} from './Dashboard'
 import {render, fireEvent, getByText} from '@testing-library/react'
 import '@testing-library/react/cleanup-after-each';
 
-describe('<Dashboard />', () =>{ 
-  it('increments count by 1', ()=>{
-      let strike = 0
-      expect(strike(strike + 1))
+describe('<Display />', () =>{ 
+  it('Renders without crashing', ()=>{
+  render(<Dashboard/>)  
   })  
+  it('strike', ()=>{
+    let clicked = false
+    const {getByText} = render(<Dashboard/>)
+    const strikeButton = getByText(/^Strike$/)
+    fireEvent.click(strikeButton)
+    expect(clicked).toBe(false)
+  })
 })
       

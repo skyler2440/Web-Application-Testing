@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import Functions from './Functions'
 import Display from './Display'
 const Dashboard = () => {
    
@@ -8,7 +7,7 @@ const Dashboard = () => {
     const [foul, setFoul] = useState(0);
     
    function strikes () {
-        if (strike === 3){
+        if (strike === 2){
             setStrike(0)
             setBall(0)
         }  else {
@@ -16,7 +15,7 @@ const Dashboard = () => {
         }
     }
     function balls(){
-        if (ball ===4){
+        if (ball === 3){
             setStrike(0)
             setBall(0)
         } else{
